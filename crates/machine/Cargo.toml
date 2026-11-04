@@ -12,18 +12,22 @@ categories.workspace = true
 readme = "README.md"
 
 [features]
-default = ["std"]
+default = ["std", "derive"]
 std = ["machine-core/std"]
 async = ["dep:machine-async"]
+derive = ["dep:machine-derive"]
+stitch = ["machine-core/stitch"]
 
 [dependencies]
 machine-core = { workspace = true }
 machine-async = { workspace = true, optional = true }
+machine-derive = { workspace = true, optional = true }
 
 [dev-dependencies]
 criterion = { workspace = true, features = ["async_tokio"] }
 futures-util = { workspace = true }
 tokio = { workspace = true, features = ["macros", "rt", "rt-multi-thread"] }
+stitch-core = { workspace = true }
 
 [[bench]]
 name = "generator_bench"

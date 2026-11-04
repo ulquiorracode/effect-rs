@@ -277,6 +277,18 @@ dependencies = [
 [[package]]
 name = "machine-core"
 version = "0.1.0"
+dependencies = [
+ "stitch-core",
+]
+
+[[package]]
+name = "machine-derive"
+version = "0.1.0"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.119",
+]
 
 [[package]]
 name = "machine-rs"
@@ -286,6 +298,8 @@ dependencies = [
  "futures-util",
  "machine-async",
  "machine-core",
+ "machine-derive",
+ "stitch-core",
  "tokio",
 ]
 
@@ -496,6 +510,11 @@ name = "slab"
 version = "0.4.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0c790de23124f9ab44544d7ac05d60440adc586479ce501c1d6d7da3cd8c9cf5"
+
+[[package]]
+name = "stitch-core"
+version = "0.3.0"
+source = "git+https://github.com/stitch-rs/stitch-framework.git?branch=main#bb2eceeccf783f6f0d78740813306c08e4dc9e02"
 
 [[package]]
 name = "syn"
