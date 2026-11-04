@@ -18,12 +18,21 @@ pub use machine_async::{
     handle_async_direct,
 };
 
+#[cfg(feature = "derive")]
+pub use machine_derive::state_machine;
+
+#[cfg(feature = "stitch")]
+pub use machine_core::stitch_bridge::{MachineTerminalAdapter, MachineTransition};
+
 /// Common prelude for `machine-rs`.
 pub mod prelude {
     pub use machine_core::prelude::*;
 
     #[cfg(feature = "async")]
     pub use machine_async::prelude::*;
+
+    #[cfg(feature = "derive")]
+    pub use machine_derive::state_machine;
 }
 
 #[cfg(test)]

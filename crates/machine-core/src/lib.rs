@@ -447,6 +447,12 @@ pub mod prelude {
     };
 }
 
+#[cfg(feature = "stitch")]
+pub mod stitch_bridge;
+
+#[cfg(feature = "stitch")]
+pub use stitch_bridge::{MachineTerminalAdapter, MachineTransition};
+
 #[cfg(test)]
 pub mod fixtures {
     use super::prelude::*;
