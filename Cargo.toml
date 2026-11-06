@@ -23,7 +23,7 @@ machine-async = { path = "crates/machine-async", version = "0.1.0" }
 machine-derive = { path = "crates/machine-derive", version = "0.1.0" }
 machine-rs = { path = "crates/machine", version = "0.1.0" }
 
-syn = { version = "2.0", features = ["full", "extra-traits"] }
+syn = { version = "3.0", features = ["full", "extra-traits"] }
 quote = "1.0"
 proc-macro2 = "1.0"
 
